@@ -6,7 +6,7 @@
     <title>Tally Count</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/themes/light.css" />
     <script type="module" differ src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.4.0/dist/shoelace-autoloader.js"></script>
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+    <link rel="stylesheet" href="./css/styles.css" />
     <script src="./JS/scripts.js" type="module" differ></script>
 </head>
 <body>
@@ -14,10 +14,15 @@
         <h1 class="header__title">Tally Count</h1>
     </header>
     <main class="counter">
+      <sl-alert data-key="confirm" variant="success" duration="3000" closable >
+            <sl-icon slot="icon" name="check2-circle"></sl-icon>
+            <strong>Counter has been reset</strong><br />
+        </sl-alert>
         <sl-input class="counter__value" data-key="number" readonly value="0"></sl-input>
         <div class="counter__actions">
-          <sl-button data-key="subtract" class="counter__button counter__button_first" size="large">-</sl-button>
-          <sl-button data-key="add" class="counter__button" size="large">+</sl-button>
+          <sl-button variant="neutral" data-key="subtract" class="counter__button counter__button_first" size="large">-</sl-button>
+          <sl-button variant="neutral" data-key="add" class="counter__button counter__button_first" size="large">+</sl-button>
+          <sl-button variant="neutral" data-key="reset" class="counter__button" size="large">Reset</sl-button>
         </div>
       </main>
       <footer class="footer">
